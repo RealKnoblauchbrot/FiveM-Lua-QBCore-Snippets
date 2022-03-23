@@ -1,0 +1,26 @@
+{
+    "name": "FiveM-Lua-QBCore-Snippets",
+    "displayName": "QBCore Snippets",
+    "description": "Snippets for the QBCore FiveM Framework",
+    "icon": "images/logo.png",
+    "version": "1.0.1",
+    "publisher": "TheRealCasi",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TheRealCasiv2"
+    }
+}

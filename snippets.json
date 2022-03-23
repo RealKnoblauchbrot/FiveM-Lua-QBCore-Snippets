@@ -1,0 +1,1112 @@
+{
+	"Get the Core Object from QB Core": {
+		"prefix": "GetCoreObject",
+		"body": [
+			"local QBCore = exports['qb-core']:GetCoreObject()"
+		],
+		"description": "Get the Core Object from QB Core"
+	},
+	"Round up a Number to decimal places": {
+		"prefix": "QBShared.Round",
+		"body": [
+		  "QBShared.Round(${1:value}, ${2:numDecimalPlaces})"
+		],
+		"description": "Round up a Number to decimal places"
+	},
+	"Change something from the Extra Option on the Vehicle": {
+		"prefix": "QBShared.ChangeVehicleExtra",
+		"body": [
+		  "QBShared.ChangeVehicleExtra(${1:vehicle}, ${2:extra}, ${3:enable})"
+		],
+		"description": "Change something from the Extra Option on the Vehicle"
+	},
+	"Set Vehicle Default Extras with a config": {
+		"prefix": "QBShared.SetDefaultExtras",
+		"body": [
+		  "QBShared.SetDefaultVehicleExtras(${1:vehicle}, ${2:config})"
+		],
+		"description": "Set Vehicle Default Extras with a config"
+	},
+	"Spilt the String": {
+		"prefix": "QBShared.SplitStr",
+		"body": [
+		  "QBShared.SplitStr(${1:str}, ${2:delimiter})"
+		],
+		"description": "Spilt the String"
+	},
+	"Trim the String": {
+		"prefix": "QBShared.Trim",
+		"body": [
+		  "QBShared.Trim(${1:value})"
+		],
+		"description": "Trim the String"
+	},
+	"Get a Random String with the max lenght": {
+		"prefix": "QBShared.RandomStr",
+		"body": [
+		  "QBShared.RandomStr(${1:length})"
+		],
+		"description": "Get A Random String with the max lenght"
+	},
+	"Get a Random Integer with the max lenght": {
+		"prefix": "QBShared.RandomInt",
+		"body": [
+		  "QBShared.RandomInt(${1:length})"
+		],
+		"description": "Get a Random Integer with the max lenght"
+	},
+	"Print a Debug Mesagge": {
+		"prefix": "QBCore.Debug",
+		"body": [
+		  "QBCore.Debug(${1:tbl}, ${2:indent})"
+		],
+		"description": "Print a Debug Mesagge"
+	},
+	"Print an Error Mesagge": {
+		"prefix": "QBCore.ShowError",
+		"body": [
+		  "QBCore.ShowError(${1:resource}, ${2:msg})"
+		],
+		"description": "Print an Error Mesagge"
+	},
+	"Print an Success Mesagge": {
+		"prefix": "QBCore.ShowSuccess",
+		"body": [
+		  "QBCore.ShowSuccess(${1:resource}, ${2:msg})"
+		],
+		"description": "Print an Success Mesagge"
+	},
+
+
+
+
+
+
+	"Close the Server(ADMIN)": {
+		"prefix": "QBCore:Server:CloseServer",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:CloseServer', ${1:reason})"
+		],
+		"description": "Close the Server(ADMIN)"
+	},
+	"Open the Server(ADMIN)": {
+		"prefix": "QBCore:Server:OpenServer",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:OpenServer')"
+		],
+		"description": "Open the Server(ADMIN)"
+	},
+	"Trigger a Server Callback": {
+		"prefix": "QBCore.Functions.TriggerCallback",
+		"body": [
+		  "QBCore.Functions.TriggerCallback(${1:callbackName}, function(${2:data})",
+		  "",
+		  "end)"
+		],
+		"description": "Trigger a Server Callback"
+	},
+	"Update the Client": {
+		"prefix": "QBCore:UpdatePlayer",
+		"body": [
+		  "TriggerServerEvent('QBCore:UpdatePlayer')"
+		],
+		"description": "Update the Client"
+	},
+	"Set Metadata on the Player": {
+		"prefix": "QBCore:Server:SetMetaData",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:SetMetaData', ${1:meta}, ${2:data})"
+		],
+		"description": "Set Metadata on the Player"
+	},
+	"Toggle Player Duty": {
+		"prefix": "QBCore:ToggleDuty",
+		"body": [
+		  "TriggerServerEvent('QBCore:ToggleDuty')"
+		],
+		"description": "Toggle Player Duty"
+	},
+	"Use Item": {
+		"prefix": "QBCore:Server:UseItem",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:UseItem', ${1:item})"
+		],
+		"description": "Use Item"
+	},
+	"Remove Item from Player Inventory": {
+		"prefix": "QBCore:Server:RemoveItem",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:RemoveItem', ${1:item}, ${2:amount}, ${3:slot})"
+		],
+		"description": "Remove Item from Player Inventory"
+	},
+	"Give Player a Item": {
+		"prefix": "QBCore:Server:AddItem",
+		"body": [
+		  "TriggerServerEvent('QBCore:Server:AddItem', ${1:item}, ${2:amount}, slot, info)"
+		],
+		"description": "Give Player a Item"
+	},
+	"Trigger a Command": {
+		"prefix": "QBCore:CallCommand",
+		"body": [
+		  "TriggerServerEvent('QBCore:CallCommand', ${1:command}, args)"
+		],
+		"description": "Trigger a Command"
+	},
+	"Does the player have that item?": {
+		"prefix": "QBCore:HasItem",
+		"body": [
+		  "QBCore.Functions.TriggerCallback('QBCore:HasItem', function(result)",
+		  "                ",
+		  "end, ${1:item})"
+		],
+		"description": "Does the player have that item?"
+	},
+
+
+	
+
+
+
+
+	"Add a single Job": {
+		"prefix": "AddJob",
+		"body": [
+		  "exports['qb-core']:AddJob(${1:jobName}, ${2:jobInfo})"
+		],
+		"description": "Create a single Job"
+	},
+	"Add a multiple Job": {
+		"prefix": "AddJobs",
+		"body": [
+		  "exports['qb-core']:AddJobs(${1:jobs})"
+		],
+		"description": "Create multiple Jobs"
+	},
+	"Create Item": {
+		"prefix": "AddItem",
+		"body": [
+		  "exports['qb-core']:AddItem(${1:itemname}, ${2:itemInfo})"
+		],
+		"description": "Create Item"
+	},
+	"Create multiple Items": {
+		"prefix": "AddItems",
+		"body": [
+		  "exports['qb-core']:AddItems(${1:items})"
+		],
+		"description": "Create multiple Items"
+	},
+	"Create a Gang": {
+		"prefix": "AddGang",
+		"body": [
+		  "exports['qb-core']:AddGang(${1:gangName}, ${2:gangInfo})"
+		],
+		"description": "Create a Gang"
+	},
+	"Create multiple Gangs": {
+		"prefix": "AddGangs",
+		"body": [
+		  "exports['qb-core']:AddGangs(${1:gangs})"
+		],
+		"description": "Create multiple Gangs"
+	},
+	"Get core Version of Resource": {
+		"prefix": "GetCoreVersion",
+		"body": [
+		  "exports['qb-core']:GetCoreVersion(${1:InvokingResource})"
+		],
+		"description": "Get core Version of Resource"
+	},
+
+
+
+
+
+
+
+
+	"Get Coordinates from entity": {
+		"prefix": "QBCore.Functions.GetCoords",
+		"body": [
+		  "QBCore.Functions.GetCoords(${1:entity})"
+		],
+		"description": "Get Coordinates from entity"
+	},
+	"Get Specific Identifier of Player": {
+		"prefix": "QBCore.Functions.GetIdentifier",
+		"body": [
+		  "QBCore.Functions.GetIdentifier(${1:source}, ${2:type})"
+		],
+		"description": "Get Specific Identifier of Player"
+	},
+	"Get Source ID of player via identifier.": {
+		"prefix": "QBCore.Functions.GetSource",
+		"body": [
+		  "QBCore.Functions.GetSource(${1:identifier})"
+		],
+		"description": "Get Source ID of player via identifier."
+	},
+	"Get Player Object via Source ID": {
+		"prefix": "QBCore.Functions.GetPlayer",
+		"body": [
+		  "QBCore.Functions.GetPlayer(${1:source})"
+		],
+		"description": "Get Player Object via Source ID"
+	},
+	"Get Player Object via Citizen ID": {
+		"prefix": "QBCore.Functions.GetPlayerByCitizenId",
+		"body": [
+		  "QBCore.Functions.GetPlayerByCitizenId(${1:citizenid})"
+		],
+		"description": "Get Player Object via Citizen ID"
+	},
+	"Get all Players": {
+		"prefix": "QBCore.Functions.GetPlayers",
+		"body": [
+		  "QBCore.Functions.GetPlayers()"
+		],
+		"description": "Get all Connected Players"
+	},
+	"Will return an array of QB Player class instances": {
+		"prefix": "QBCore.Functions.GetQBPlayers",
+		"body": [
+		  "QBCore.Functions.GetQBPlayers()"
+		],
+		"description": "Will return an array of QB Player class instances"
+	},
+	"Gets a list of all on duty players of a specified job and the number": {
+		"prefix": "QBCore.Functions.GetPlayersOnDuty",
+		"body": [
+		  "QBCore.Functions.GetPlayersOnDuty(${1:job})"
+		],
+		"description": "Gets a list of all on duty players of a specified job and the number"
+	},
+	"Returns only the amount of players on duty for the specified job": {
+		"prefix": "QBCore.Functions.GetDutyCount",
+		"body": [
+		  "QBCore.Functions.GetDutyCount(${1:job})"
+		],
+		"description": "Returns only the amount of players on duty for the specified job"
+	},
+	"Returns the objects related to buckets, first returned value is the player buckets, second one is entity buckets (Only touch if you know what you are doing)": {
+		"prefix": "QBCore.Functions.GetBucketObjects",
+		"body": [
+		  "QBCore.Functions.GetBucketObjects()"
+		],
+		"description": "Returns the objects related to buckets, first returned value is the player buckets, second one is entity buckets (Only touch if you know what you are doing)"
+	},
+	"Will set the provided player id / source into the provided bucket id (Only touch if you know what you are doing)": {
+		"prefix": "QBCore.Functions.SetPlayerBucket",
+		"body": [
+		  "QBCore.Functions.SetPlayerBucket(${1:source}, ${2:bucket})"
+		],
+		"description": "Will set the provided player id / source into the provided bucket id (Only touch if you know what you are doing)"
+	},
+	"Will set any entity into the provided bucket, for example peds / vehicles / props / etc. (Only touch if you know what you are doing)": {
+		"prefix": "QBCore.Functions.SetEntityBucket",
+		"body": [
+		  "QBCore.Functions.SetEntityBucket(${1:entity}, ${2:bucket})"
+		],
+		"description": "Will set any entity into the provided bucket, for example peds / vehicles / props / etc. (Only touch if you know what you are doing)"
+	},
+	"Will return an array of all the player ids inside the current bucket": {
+		"prefix": "QBCore.Functions.GetPlayersInBucket",
+		"body": [
+		  "QBCore.Functions.GetPlayersInBucket(${1:bucket})"
+		],
+		"description": "Will return an array of all the player ids inside the current bucket"
+	},
+	"Will return an array of all the entities inside the current bucket (not for player entities, use GetPlayersInBucket for that)": {
+		"prefix": "QBCore.Functions.GetEntitiesInBucket",
+		"body": [
+		  "QBCore.Functions.GetEntitiesInBucket(${1:bucket})"
+		],
+		"description": "Will return an array of all the entities inside the current bucket (not for player entities, use GetPlayersInBucket for that)"
+	},
+	"Create a Server Callback": {
+		"prefix": "QBCore.Functions.CreateCallback",
+		"body": [
+		  "QBCore.Functions.CreateCallback(${1:callbackName}, function(source, cb, ${2:args})",
+		  "    cb(\"\")",
+		  "end)"
+		],
+		"description": "Create a Server Callback"
+	},
+	"Create a Useable Item": {
+		"prefix": "QBCore.Functions.CreateUseableItem",
+		"body": [
+		  "QBCore.Functions.CreateUseableItem(${1:itemName}, function(source, item)",
+		  "    local src = source",
+		  "    local Player = QBCore.Functions.GetPlayer(src)",
+		  "    if Player.Functions.GetItemByName(item.name) then",
+		  "        ",
+		  "    end",
+		  "end)"
+		],
+		"description": "Create a Useable Item"
+	},
+	"Returns if the item can be used.": {
+		"prefix": "QBCore.Functions.CanUseItem",
+		"body": [
+		  "QBCore.Functions.CanUseItem(${1:itemName})"
+		],
+		"description": "Returns if the item can be used."
+	},
+	"Force the Player of the ID to use item.": {
+		"prefix": "QBCore.Functions.UseItem",
+		"body": [
+		  "QBCore.Functions.UseItem(${1:source},${2:itemName})"
+		],
+		"description": "Force the Player of the ID to use item."
+	},
+	"Kick Player": {
+		"prefix": "QBCore.Functions.Kick",
+		"body": [
+		  "QBCore.Functions.Kick(${1:source}, ${2:reason}, ${3:kickReason}, ${4:deferrals})"
+		],
+		"description": "Kick Player"
+	},
+	"Is player Whitelisted": {
+		"prefix": "QBCore.Functions.IsWhitelisted",
+		"body": [
+		  "QBCore.Functions.IsWhitelisted(${1:source})"
+		],
+		"description": "Is player Whitelisted"
+	},
+	"Give Player Permissions": {
+		"prefix": "QBCore.Functions.AddPermission",
+		"body": [
+		  "QBCore.Functions.AddPermission(${1:source}, ${2:permissions})"
+		],
+		"description": "Give Player Permissions"
+	},
+	"Set Player to user": {
+		"prefix": "QBCore.Functions.RemovePermission",
+		"body": [
+		  "QBCore.Functions.RemovePermission(${1:source})"
+		],
+		"description": "Set Player to user"
+	},
+	"Does the player have specified permission": {
+		"prefix": "QBCore.Functions.HasPermission",
+		"body": [
+		  "QBCore.Functions.HasPermission(${1:source}, ${2:permission})"
+		],
+		"description": "Does the player have specified permission"
+	},
+	"Get Player Permissions": {
+		"prefix": "QBCore.Functions.GetPermission",
+		"body": [
+		  "QBCore.Functions.GetPermission(${1:source})"
+		],
+		"description": "Get Player Permissions"
+	},
+	"Is Admin Opt In": {
+		"prefix": "QBCore.Functions.IsOptin",
+		"body": [
+		  "QBCore.Functions.IsOptin(${1:source})"
+		],
+		"description": "Is Admin Opt In"
+	},
+	"Toggle Optin": {
+		"prefix": "QBCore.Functions.ToggleOptin",
+		"body": [
+		  "QBCore.Functions.ToggleOptin(${1:source})"
+		],
+		"description": "Toggle Optin"
+	},
+	"Is player banned?": {
+		"prefix": "QBCore.Functions.IsPlayerBanned",
+		"body": [
+		  "QBCore.Functions.IsPlayerBanned(${1:source})"
+		],
+		"description": "Is player banned?"
+	},
+	"Is a Player with the License on the server?": {
+		"prefix": "QBCore.Functions.IsLicenseInUse",
+		"body": [
+		  "QBCore.Functions.IsLicenseInUse(${1:license})"
+		],
+		"description": "Is a Player with the License on the server?"
+	},
+
+
+
+
+
+
+
+
+	"Log In Player": {
+		"prefix": "QBCore.Player.Login",
+		"body": [
+		  "QBCore.Player.Login(${1:source}, ${2:citizenid}, ${3:newData})"
+		],
+		"description": "Log In Player"
+	},
+	"Check Player Data and Create Player": {
+		"prefix": "QBCore.Player.CheckPlayerData",
+		"body": [
+		  "QBCore.Player.CheckPlayerData(${1:source}, ${2:PlayerData})"
+		],
+		"description": "Check Player Data and Create Player"
+	},
+	"Log Out Player": {
+		"prefix": "QBCore.Player.Logout",
+		"body": [
+		  "QBCore.Player.Logout(${1:source})"
+		],
+		"description": "Log Out Player"
+	},
+	"Create Player": {
+		"prefix": "QBCore.Player.CreatePlayer",
+		"body": [
+		  "QBCore.Player.CreatePlayer(${1:PlayerData})"
+		],
+		"description": "Create Player"
+	},
+	"Set player job": {
+		"prefix": "Player.Functions.SetJob",
+		"body": [
+		  "Player.Functions.SetJob(${1:job}, {2:grade})"
+		],
+		"description": "Set player job"
+	},
+	"Set player gang": {
+		"prefix": "Player.Functions.SetGang",
+		"body": [
+		  "Player.Functions.SetGang(${1:gang}, {2:grade})"
+		],
+		"description": "Set player gang"
+	},
+	"Set player duty status": {
+		"prefix": "Player.Functions.SetJobDuty",
+		"body": [
+		  "Player.Functions.SetJobDuty(${1:onDuty})"
+		],
+		"description": "Set player duty status"
+	},
+	"Set player metadata": {
+		"prefix": "Player.Functions.SetMetaData",
+		"body": [
+		  "Player.Functions.SetMetaData(${1:meta}, ${2:data})"
+		],
+		"description": "Set player metadata"
+	},
+	"Gives Job Reputation to Player": {
+		"prefix": "Player.Functions.AddJobReputation",
+		"body": [
+		  "Player.Functions.AddJobReputation(${1:amount})"
+		],
+		"description": "Gives Job Reputation to Player"
+	},
+	"Give Player money": {
+		"prefix": "Player.Functions.AddMoney",
+		"body": [
+		  "Player.Functions.AddMoney(${1:moneytype}, ${2:amount}, ${3:reason})"
+		],
+		"description": "Give Player money"
+	},
+	"Remove Player money": {
+		"prefix": "Player.Functions.RemoveMoney",
+		"body": [
+		  "Player.Functions.RemoveMoney(${1:moneytype}, ${2:amount}, ${3:reason})"
+		],
+		"description": "Remove Player money"
+	},
+	"Set Player money": {
+		"prefix": "Player.Functions.SetMoney",
+		"body": [
+		  "Player.Functions.SetMoney(${1:moneytype}, ${2:amount}, ${3:reason})"
+		],
+		"description": "Set Player money"
+	},
+	"Get players money of type": {
+		"prefix": "Player.Functions.GetMoney",
+		"body": [
+		  "Player.Functions.GetMoney(${1:moneytype})"
+		],
+		"description": "Get players money of type"
+	},
+	"Give Player item": {
+		"prefix": "Player.Functions.AddItem",
+		"body": [
+		  "Player.Functions.AddItem(${1:item}, ${2:amount}, ${3:slot}, ${4:info})"
+		],
+		"description": "Give Player item"
+	},
+	"Remove Player item": {
+		"prefix": "Player.Functions.RemoveItem",
+		"body": [
+		  "Player.Functions.RemoveItem(${1:item}, ${2:amount}, ${3:slot})"
+		],
+		"description": "Give Player item"
+	},
+	"Set Player inventory": {
+		"prefix": "Player.Functions.SetInventory",
+		"body": [
+		  "Player.Functions.SetInventory(${1:items}, ${2:dontUpdateChat})"
+		],
+		"description": "Set Player inventory"
+	},
+	"Clear Player Inventory": {
+		"prefix": "Player.Functions.ClearInventory",
+		"body": [
+		  "Player.Functions.ClearInventory()"
+		],
+		"description": "Clear Player Inventory"
+	},
+	"Get item info": {
+		"prefix": "Player.Functions.GetItemByName",
+		"body": [
+		  "Player.Functions.GetItemByName(${1:item})"
+		],
+		"description": "Get item info"
+	},
+	"Get items info": {
+		"prefix": "Player.Functions.GetItemsByName",
+		"body": [
+		  "Player.Functions.GetItemsByName(${1:item})"
+		],
+		"description": "Get items info"
+	},
+	"Set Creditcard number": {
+		"prefix": "Player.Functions.SetCreditCard",
+		"body": [
+		  "Player.Functions.SetCreditCard(${1:cardNumber})"
+		],
+		"description": "Set Creditcard number"
+	},
+	"Get Inventoryslot of creditcard": {
+		"prefix": "Player.Functions.GetCardSlot",
+		"body": [
+		  "Player.Functions.GetCardSlot(${1:cardNumber}, ${2:cardType})"
+		],
+		"description": "Get Inventoryslot of creditcard"
+	},
+	"Get Item by Inventory Slot": {
+		"prefix": "Player.Functions.GetItemBySlot",
+		"body": [
+		  "Player.Functions.GetItemBySlot(${1:slot})"
+		],
+		"description": "Get Item by Inventory Slot"
+	},
+	"Save Player": {
+		"prefix": "Player.Functions.Save",
+		"body": [
+		  "Player.Functions.Save()"
+		],
+		"description": "Save Player"
+	},
+	"Save Player by Source ID": {
+		"prefix": "QBCore.Player.Save",
+		"body": [
+		  "QBCore.Player.Save(${1:source})"
+		],
+		"description": "Save Player by Source ID"
+	},
+	"Delete Character": {
+		"prefix": "QBCore.Player.DeleteCharacter",
+		"body": [
+		  "QBCore.Player.DeleteCharacter(${1:source}, ${2:citizenid})"
+		],
+		"description": "Delete Character"
+	},
+	"Load Inventory": {
+		"prefix": "QBCore.Player.LoadInventory",
+		"body": [
+		  "QBCore.Player.LoadInventory(${1:PlayerData})"
+		],
+		"description": "Load Inventory"
+	},
+	"Save Inventory": {
+		"prefix": "QBCore.Player.SaveInventory",
+		"body": [
+		  "QBCore.Player.SaveInventory(${1:source})"
+		],
+		"description": "Save Inventory"
+	},
+	"Get Total Weight": {
+		"prefix": "QBCore.Player.GetTotalWeight",
+		"body": [
+		  "QBCore.Player.GetTotalWeight(${1:items})"
+		],
+		"description": "Get Total Weight"
+	},
+	"Get all Slots of Item": {
+		"prefix": "QBCore.Player.GetSlotsByItem",
+		"body": [
+		  "QBCore.Player.GetSlotsByItem(${1:items}, ${2:itemName})"
+		],
+		"description": "Get all Slots of Item"
+	},
+	"Get first slot of Item": {
+		"prefix": "QBCore.Player.GetFirstSlotByItem",
+		"body": [
+		  "QBCore.Player.GetFirstSlotByItem(${1:items}, ${2:itemName})"
+		],
+		"description": "Get first slot of Item"
+	},
+	"Create citizen id": {
+		"prefix": "QBCore.Player.CreateCitizenId",
+		"body": [
+		  "QBCore.Player.CreateCitizenId()"
+		],
+		"description": "Create citizen id"
+	},
+	"Create Bank Account Number": {
+		"prefix": "QBCore.Player.CreateAccountNumber",
+		"body": [
+		  "QBCore.Player.CreateAccountNumber()"
+		],
+		"description": "Create Bank Account Number"
+	},
+	"Create Phone Number": {
+		"prefix": "QBCore.Player.CreatePhoneNumber",
+		"body": [
+		  "QBCore.Player.CreatePhoneNumber()"
+		],
+		"description": "Create Phone Number"
+	},
+	"Create Fingerprint": {
+		"prefix": "QBCore.Player.CreateFingerId",
+		"body": [
+		  "QBCore.Player.CreateFingerId()"
+		],
+		"description": "Create Fingerprint"
+	},
+	"Create Crypto Wallet Id": {
+		"prefix": "QBCore.Player.CreateWalletId",
+		"body": [
+		  "QBCore.Player.CreateWalletId()"
+		],
+		"description": "Create Crypto Wallet Id"
+	},
+	"Create Weapon Serial Number": {
+		"prefix": "QBCore.Player.CreateSerialNumber",
+		"body": [
+		  "QBCore.Player.CreateSerialNumber()"
+		],
+		"description": "Create Weapon Serial Number"
+	},
+
+
+
+
+
+
+
+
+	"Draw Text Function": {
+		"prefix": "DrawText",
+		"body": [
+		  "exports['qb-core']:DrawText(${1:text}, ${2:position})"
+		],
+		"description": "Draw Text Function"
+	},
+	"Change Draw Text Function": {
+		"prefix": "ChangeText",
+		"body": [
+		  "exports['qb-core']:ChangeText(${1:text}, ${2:position})"
+		],
+		"description": "Change Draw Text Function"
+	},
+	"Hide Draw Text Function": {
+		"prefix": "HideText",
+		"body": [
+		  "exports['qb-core']:HideText()"
+		],
+		"description": "Hide Draw Text Function"
+	},
+	"Keypressed Function": {
+		"prefix": "KeyPressed",
+		"body": [
+		  "exports['qb-core']:KeyPressed()"
+		],
+		"description": "Keypressed Function"
+	},
+
+
+	
+
+
+
+
+
+
+	"AddEventHandler on Player Loaded": {
+		"prefix": "QBCore:Client:OnPlayerLoaded",
+		"body": [
+		  "AddEventHandler('QBCore:Client:OnPlayerLoaded', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Player Loaded"
+	},
+	"AddEventHandler on Player Unloaded": {
+		"prefix": "QBCore:Client:OnPlayerUnload",
+		"body": [
+		  "AddEventHandler('QBCore:Client:OnPlayerUnload', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Player Unloaded"
+	},
+	"AddEventHandler on PVP State changed": {
+		"prefix": "QBCore:Client:PvpHasToggled",
+		"body": [
+		  "AddEventHandler('QBCore:Client:PvpHasToggled', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on PVP State changed"
+	},
+	"AddEventHandler on Teleport to player ran": {
+		"prefix": "QBCore:Command:TeleportToPlayer",
+		"body": [
+		  "AddEventHandler('QBCore:Command:TeleportToPlayer', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Teleport to player ran"
+	},
+	"AddEventHandler on Teleport to coordinates command ran": {
+		"prefix": "QBCore:Command:TeleportToCoords",
+		"body": [
+		  "AddEventHandler('QBCore:Command:TeleportToCoords', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Teleport to coordinates command ran"
+	},
+	"AddEventHandler on Teleport to Marker command ran": {
+		"prefix": "QBCore:Command:GoToMarker",
+		"body": [
+		  "AddEventHandler('QBCore:Command:GoToMarker', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Teleport to Marker command ran"
+	},
+	"AddEventHandler on Spawn Vehicle command ran": {
+		"prefix": "QBCore:Command:SpawnVehicle",
+		"body": [
+		  "AddEventHandler('QBCore:Command:SpawnVehicle', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Spawn Vehicle command ran"
+	},
+	"AddEventHandler on Delete Vehicle command ran": {
+		"prefix": "QBCore:Command:DeleteVehicle",
+		"body": [
+		  "AddEventHandler('QBCore:Command:DeleteVehicle', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on Delete Vehicle command ran"
+	},
+	"AddEventHandler on SetPlayerData command ran": {
+		"prefix": "QBCore:Command:SetPlayerData",
+		"body": [
+		  "AddEventHandler('QBCore:Command:SetPlayerData', function()",
+		  "",
+		  "end"
+		],
+		"description": "AddEventHandler on SetPlayerData command ran"
+	},
+	"TriggerEvent on SetPlayerData command ran": {
+		"prefix": "QBCore:Command:SetPlayerData",
+		"body": [
+		  "TriggerServerEvent('QBCore:Command:SetPlayerData', ${1:val})"
+		],
+		"description": "TriggerEvent on SetPlayerData command ran"
+	},
+	"Update Player Data": {
+		"prefix": "QBCore:Command:UpdatePlayerData",
+		"body": [
+		  "TriggerServerEvent('QBCore:Player:UpdatePlayerData')"
+		],
+		"description": "Update Player Data"
+	},
+	"Send Notification (Server)": {
+		"prefix": "QBCore:Notify",
+		"body": [
+		  "TriggerClientEvent('QBCore:Notify', ${1:source}, ${2:text}, ${3:type}, ${4:length})"
+		],
+		"description": "Send Notification (Server)"
+	},
+	"Send Notification (Client)": {
+		"prefix": "QBCore:Notify",
+		"body": [
+		  "TriggerEvent('QBCore:Notify', ${1:text}, ${2:type}, ${3:length})"
+		],
+		"description": "Send Notification (Client)"
+	},
+	"Use Item 2": {
+		"prefix": "QBCore:Client:UseItem",
+		"body": [
+		  "TriggerEvent('QBCore:Client:UseItem', ${1:item})"
+		],
+		"description": "Use Item"
+	},
+	"ShowMe3D": {
+		"prefix": "QBCore:Command:ShowMe3D",
+		"body": [
+		  "TriggerEvent('QBCore:Command:ShowMe3D, ${1:senderId}, ${2:msg})"
+		],
+		"description": "ShowMe3D"
+	},
+	"OnSharedUpdate": {
+		"prefix": "QBCore:Client:OnSharedUpdate",
+		"body": [
+		  "TriggerEvent('QBCore:Client:OnSharedUpdate, ${1:tableName}, ${2:key}, ${3:value})"
+		],
+		"description": "OnSharedUpdate"
+	},
+	"OnSharedUpdateMultiple": {
+		"prefix": "QBCore:Client:OnSharedUpdateMultiple",
+		"body": [
+		  "TriggerEvent('QBCore:Client:OnSharedUpdateMultiple, ${1:tableName}, ${2:values})"
+		],
+		"description": "OnSharedUpdateMultiple"
+	},
+	"Get Player Data of Player": {
+		"prefix": "QBCore.Functions.GetPlayerData",
+		"body": [
+		  "QBCore.Functions.GetPlayerData(function(PlayerData)",
+		  "",
+		  "end)"
+		],
+		"description": "Get Player Data of Player"
+	},
+	"Get Coords of entity": {
+		"prefix": "QBCore.Functions.GetCoords",
+		"body": [
+		  "QBCore.Functions.GetCoords(${1:entity})"
+		],
+		"description": "Get Coords of entity"
+	},
+	"Does Player have Item": {
+		"prefix": "QBCore.Functions.HasItem",
+		"body": [
+		  "QBCore.Functions.HasItem(${1:item})"
+		],
+		"description": "Does Player have Item"
+	},
+	"Draw Text": {
+		"prefix": "QBCore.Functions.DrawText",
+		"body": [
+		  "QBCore.Functions.DrawText(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:scale}, ${6:r}, ${7:g}, ${8:b}, ${9:a}, ${10:text})"
+		],
+		"description": "Draw Text"
+	},
+	"Draw Text 3D": {
+		"prefix": "QBCore.Functions.DrawText3D",
+		"body": [
+		  "QBCore.Functions.DrawText3D(${1:x}, ${2:y}, ${3:z}, ${4:text})"
+		],
+		"description": "Draw Text 3D"
+	},
+	"Create Blip": {
+		"prefix": "QBCore.Functions.CreateBlip",
+		"body": [
+		  "QBCore.Functions.CreateBlip(coords, sprite, display, scale, colour, shortRange, title, alpha, friendly, bright, category, hiddenOnLegend, highDetail, rotation, cone, shrink, showHeight, showNumber, showOutline)" 
+		],
+		"description": "Create Blip"
+	},
+	"Request a Animation Dictionary": {
+		"prefix": "QBCore.Functions.RequestAnimDict",
+		"body": [
+		  "QBCore.Functions.RequestAnimDict(${1:animDict})"
+		],
+		"description": "Request a Animation Dictionary"
+	},
+	"Play Animation": {
+		"prefix": "QBCore.Functions.PlayAnim",
+		"body": [
+		  "QBCore.Functions.PlayAnim(${1:animDict}, ${2:animName}, ${3:upperbodyOnly}, ${4:duration})"
+		],
+		"description": "Play Animation"
+	},
+	"Load Model": {
+		"prefix": "QBCore.Functions.LoadModel",
+		"body": [
+		  "QBCore.Functions.LoadModel(model)"
+		],
+		"description": "Load Model"
+	},
+	"Notify": {
+		"prefix": "QBCore.Functions.Notify",
+		"body": [
+		  "QBCore.Functions.Notify(${1:text}, ${2:texttype}, ${3:length})"
+		],
+		"description": "Notify"
+	},
+	"Play Progressbar": {
+		"prefix": "QBCore.Functions.Progressbar",
+		"body": [
+		  "QBCore.Functions.Progressbar(name, label, duration, useWhileDead, canCancel, disableControls, animation, prop, propTwo, onFinish, onCancel)" 
+		],
+		"description": "Play Progressbar"
+	},
+	"Get All Vehicles": {
+		"prefix": "QBCore.Functions.GetVehicles",
+		"body": [
+		  "QBCore.Functions.GetVehicles()"
+		],
+		"description": "Get All Vehicles"
+	},
+	"Get All Objects": {
+		"prefix": "QBCore.Functions.GetObjects",
+		"body": [
+		  "QBCore.Functions.GetObjects()"
+		],
+		"description": "Get All Objects"
+	},
+	"Get All Players": {
+		"prefix": "QBCore.Functions.GetPlayers",
+		"body": [
+		  "QBCore.Functions.GetPlayers()"
+		],
+		"description": "Get All Players"
+	},
+	"Get All Peds": {
+		"prefix": "QBCore.Functions.GetPeds",
+		"body": [
+		  "QBCore.Functions.GetPeds(ignoreList)"
+		],
+		"description": "Get All Peds"
+	},
+	"Get Closest Peds": {
+		"prefix": "QBCore.Functions.GetClosestPed",
+		"body": [
+		  "QBCore.Functions.GetClosestPed(${1:coords}, ignoreList)"
+		],
+		"description": "Get closest Peds"
+	},
+	"Is Player wearing gloves": {
+		"prefix": "QBCore.Functions.IsWearingGloves",
+		"body": [
+		  "QBCore.Functions.IsWearingGloves()"
+		],
+		"description": "Is Player wearing gloves"
+	},
+	"Get Closest Player": {
+		"prefix": "QBCore.Functions.GetClosestPlayer",
+		"body": [
+		  "QBCore.Functions.GetClosestPlayer(${1:coords})"
+		],
+		"description": "Get closest Player"
+	},
+	"Get closest Player in range": {
+		"prefix": "QBCore.Functions.GetPlayersFromCoords",
+		"body": [
+		  "QBCore.Functions.GetPlayersFromCoords(${1:coords}, ${2:distance})"
+		],
+		"description": "Get closest Player in range"
+	},
+	"Get closest Vehicle": {
+		"prefix": "QBCore.Functions.GetClosestVehicle",
+		"body": [
+		  "QBCore.Functions.GetClosestVehicle(${1:coords})"
+		],
+		"description": "Get closest Vehicle"
+	},
+	"Get closest Object": {
+		"prefix": "QBCore.Functions.GetClosestObject",
+		"body": [
+		  "QBCore.Functions.GetClosestObject(${1:coords})"
+		],
+		"description": "Get closest Object"
+	},
+	"Get closest Bone": {
+		"prefix": "QBCore.Functions.GetClosestBone",
+		"body": [
+		  "QBCore.Functions.GetClosestBone(${1:entity}, ${2:list})"
+		],
+		"description": "Get closest Bone"
+	},
+	"Get closest Bone in range": {
+		"prefix": "QBCore.Functions.GetBoneDistance",
+		"body": [
+		  "QBCore.Functions.GetBoneDistance(${1:entity}, ${2:boneType}, ${3:boneIndex})"
+		],
+		"description": "Get closest Bone in range"
+	},
+	"Attach Prop to Ped": {
+		"prefix": "QBCore.Functions.AttachProp",
+		"body": [
+		  "QBCore.Functions.AttachProp(ped, model, boneId, x, y, z, xR, yR, zR, vertex)" 
+		],
+		"description": "Attach Prop to Ped"
+	},
+	"Spawn vehicle": {
+		"prefix": "QBCore.Functions.SpawnVehicle",
+		"body": [
+		  "QBCore.Functions.SpawnVehicle(model, cb, coords, isnetworked, teleportInto)" 
+		],
+		"description": "Spawn vehicle"
+	},
+	"Delete Vehicle": {
+		"prefix": "QBCore.Functions.DeleteVehicle",
+		"body": [
+		  "QBCore.Functions.DeleteVehicle(${1:vehicle})"
+		],
+		"description": "Delete Vehicle"
+	},
+	"Get Plate of Vehicle": {
+		"prefix": "QBCore.Functions.GetPlate",
+		"body": [
+		  "QBCore.Functions.GetPlate(${1:vehicle})"
+		],
+		"description": "Get Plate of Vehicle"
+	},
+	"Is Spawnpoint Clear?": {
+		"prefix": "QBCore.Functions.SpawnClear",
+		"body": [
+		  "QBCore.Functions.SpawnClear(${1:coords}, ${2:radius})"
+		],
+		"description": "Is Spawnpoint Clear?"
+	},
+	"Get Properties of Vehicle": {
+		"prefix": "QBCore.Functions.GetVehicleProperties",
+		"body": [
+		  "QBCore.Functions.GetVehicleProperties(${1:vehicle})"
+		],
+		"description": "Get Properties of Vehicle"
+	},
+	"Set Properties of Vehicle": {
+		"prefix": "QBCore.Functions.SetVehicleProperties",
+		"body": [
+		  "QBCore.Functions.SetVehicleProperties(${1:vehicle}, ${2:props})"
+		],
+		"description": "Set Properties of Vehicle"
+	},
+	"Load Particle Dictionary": {
+		"prefix": "QBCore.Functions.LoadParticleDictionary",
+		"body": [
+		  "QBCore.Functions.LoadParticleDictionary(${1:dictionary})"
+		],
+		"description": "Load Particle Dictionary"
+	},
+	"Create particles at coordinates": {
+		"prefix": "QBCore.Functions.StartParticleAtCoord",
+		"body": [
+		  "QBCore.Functions.StartParticleAtCoord(dict, ptName, looped, coords, rot, scale, alpha, color, duration)" 
+		],
+		"description": "Create particles at coordinates"
+	},
+	"Create particles on Entity": {
+		"prefix": "QBCore.Functions.StartParticleOnEntity",
+		"body": [
+		  "QBCore.Functions.StartParticleOnEntity(dict, ptName, looped, entity, bone, offset, rot, scale, alpha, color, evolution, duration)"
+		],
+		"description": "Create particles on Entity"
+	  }
+
+
+	
+}
